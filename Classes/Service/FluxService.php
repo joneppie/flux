@@ -339,10 +339,10 @@ class FluxService implements SingletonInterface {
 	 * @return array
 	 */
 	public function getAllTypoScript() {
-		if (0 === count(self::$typoScript)) {
+// 		if (0 === count(self::$typoScript)) {
 			self::$typoScript = (array) $this->configurationManager->getConfiguration(ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
 			self::$typoScript = GeneralUtility::removeDotsFromTS(self::$typoScript);
-		}
+// 		}
 		return self::$typoScript;
 	}
 
